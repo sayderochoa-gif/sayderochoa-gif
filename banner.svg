@@ -1,0 +1,555 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Fondo espacio profundo y nebulosas cósmicas -->
+    <radialGradient id="spaceDeep" cx="75%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#14062b" />
+      <stop offset="35%" stop-color="#0b031d" />
+      <stop offset="70%" stop-color="#05010c" />
+      <stop offset="100%" stop-color="#020005" />
+    </radialGradient>
+
+    <!-- Nebulosas espaciales realistas -->
+    <radialGradient id="nebulaPurple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#bd00ff" stop-opacity="0.22" />
+      <stop offset="50%" stop-color="#7928ca" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="nebulaCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f3ff" stop-opacity="0.18" />
+      <stop offset="60%" stop-color="#0051ff" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="nebulaMagenta" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff0077" stop-opacity="0.15" />
+      <stop offset="70%" stop-color="#8000ff" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Luna Hiperrealista -->
+    <radialGradient id="moonBody" cx="38%" cy="36%" r="62%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="25%" stop-color="#edf2f7" />
+      <stop offset="60%" stop-color="#cbd5e1" />
+      <stop offset="85%" stop-color="#94a3b8" />
+      <stop offset="100%" stop-color="#475569" />
+    </radialGradient>
+
+    <radialGradient id="craterDeep" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#64748b" />
+      <stop offset="70%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </radialGradient>
+
+    <radialGradient id="craterSoft" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#94a3b8" />
+      <stop offset="80%" stop-color="#64748b" />
+      <stop offset="100%" stop-color="#475569" />
+    </radialGradient>
+
+    <radialGradient id="moonAtmosphere" cx="50%" cy="50%" r="50%">
+      <stop offset="70%" stop-color="#38bdf8" stop-opacity="0" />
+      <stop offset="92%" stop-color="#38bdf8" stop-opacity="0.35" />
+      <stop offset="98%" stop-color="#a855f7" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#00f3ff" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Gradiente de texto futurista -->
+    <linearGradient id="textNeonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f3ff" />
+      <stop offset="50%" stop-color="#d946ef" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <!-- Gradiente del fuselaje de la nave (Realista con sombras metálicas) -->
+    <linearGradient id="rocketBodyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="35%" stop-color="#e2e8f0" />
+      <stop offset="70%" stop-color="#94a3b8" />
+      <stop offset="100%" stop-color="#475569" />
+    </linearGradient>
+
+    <linearGradient id="rocketDarkPlate" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- Propulsión y Plasma de Cohete -->
+    <linearGradient id="thrusterCore" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="20%" stop-color="#67e8f9" />
+      <stop offset="50%" stop-color="#00d8ff" />
+      <stop offset="80%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="exhaustSmoke" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#00f3ff" stop-opacity="0.8" />
+      <stop offset="30%" stop-color="#bd00ff" stop-opacity="0.5" />
+      <stop offset="70%" stop-color="#3b82f6" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Filtros de Resplandor Óptico / Neón / Glow -->
+    <filter id="bloomUltra" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="blur1" />
+      <feGaussianBlur stdDeviation="16" result="blur2" />
+      <feGaussianBlur stdDeviation="3" result="sharp" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="sharp" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowSubtle" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&amp;family=Rajdhani:wght@600;700&amp;display=swap');
+
+      /* Tipografía */
+      .font-title {
+        font-family: 'Orbitron', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 40px;
+        font-weight: 900;
+        fill: url(#textNeonGrad);
+        letter-spacing: 3px;
+        filter: drop-shadow(0 0 16px rgba(0, 243, 255, 0.45));
+      }
+
+      .font-subtitle {
+        font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 17px;
+        font-weight: 700;
+        fill: #00f3ff;
+        letter-spacing: 4px;
+      }
+
+      .font-tech {
+        font-family: 'Rajdhani', monospace;
+        font-size: 12px;
+        font-weight: 600;
+        fill: #a78bfa;
+        letter-spacing: 2px;
+      }
+
+      /* Animación de Estrellas Parpadeantes */
+      @keyframes twinkleFast {
+        0%, 100% { opacity: 0.2; transform: scale(0.7); }
+        50% { opacity: 1; transform: scale(1.3); }
+      }
+
+      @keyframes twinkleSlow {
+        0%, 100% { opacity: 0.3; transform: scale(0.9); }
+        50% { opacity: 1; transform: scale(1.4); }
+      }
+
+      .star-f1 { animation: twinkleFast 2.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .star-f2 { animation: twinkleFast 3.4s ease-in-out infinite 0.8s; transform-box: fill-box; transform-origin: center; }
+      .star-s1 { animation: twinkleSlow 4.5s ease-in-out infinite 1.5s; transform-box: fill-box; transform-origin: center; }
+      .star-s2 { animation: twinkleSlow 3.8s ease-in-out infinite 2.1s; transform-box: fill-box; transform-origin: center; }
+
+      /* Animación Realista de Vuelo de la Nave hacia la Luna */
+      @keyframes spaceFlight {
+        0% {
+          transform: translate(0px, 0px) rotate(0deg);
+        }
+        25% {
+          transform: translate(12px, -10px) rotate(1.2deg);
+        }
+        50% {
+          transform: translate(26px, -24px) rotate(-0.8deg);
+        }
+        75% {
+          transform: translate(14px, -12px) rotate(0.6deg);
+        }
+        100% {
+          transform: translate(0px, 0px) rotate(0deg);
+        }
+      }
+
+      .rocket-ship {
+        animation: spaceFlight 5.5s ease-in-out infinite;
+        transform-origin: center;
+      }
+
+      /* Pulsación Realista del Fuego del Reactor / Cono Mach */
+      @keyframes flameThrust {
+        0% {
+          transform: scaleY(0.92) scaleX(0.96);
+          opacity: 0.92;
+        }
+        50% {
+          transform: scaleY(1.18) scaleX(1.08);
+          opacity: 1;
+        }
+        100% {
+          transform: scaleY(0.95) scaleX(0.94);
+          opacity: 0.9;
+        }
+      }
+
+      .flame-anim {
+        animation: flameThrust 0.12s ease-in-out infinite alternate;
+        transform-box: fill-box;
+        transform-origin: top center;
+      }
+
+      @keyframes shockDiamonds {
+        0%, 100% { opacity: 0.6; transform: scale(0.9); }
+        50% { opacity: 1; transform: scale(1.15); }
+      }
+
+      .shock-diamond {
+        animation: shockDiamonds 0.18s ease-in-out infinite alternate;
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+
+      /* Partículas de plasma expulsadas a alta velocidad */
+      @keyframes particleDrift {
+        0% {
+          transform: translate(0, 0) scale(1);
+          opacity: 0.9;
+        }
+        100% {
+          transform: translate(-90px, 90px) scale(0.1);
+          opacity: 0;
+        }
+      }
+
+      .particle-p1 { animation: particleDrift 0.8s linear infinite; }
+      .particle-p2 { animation: particleDrift 1.1s linear infinite 0.3s; }
+      .particle-p3 { animation: particleDrift 0.9s linear infinite 0.6s; }
+
+      /* Líneas de Hipervelocidad Cósmica */
+      @keyframes speedDash {
+        0% { stroke-dashoffset: 260; opacity: 0; }
+        20% { opacity: 0.9; }
+        80% { opacity: 0.9; }
+        100% { stroke-dashoffset: -260; opacity: 0; }
+      }
+
+      .speed-stream-1 {
+        stroke-dasharray: 80 180;
+        animation: speedDash 1.2s linear infinite;
+      }
+
+      .speed-stream-2 {
+        stroke-dasharray: 100 200;
+        animation: speedDash 1.6s linear infinite 0.4s;
+      }
+
+      .speed-stream-3 {
+        stroke-dasharray: 60 160;
+        animation: speedDash 1.4s linear infinite 0.8s;
+      }
+
+      /* Pulso Atmosférico de la Luna */
+      @keyframes moonGlowPulse {
+        0%, 100% { opacity: 0.45; transform: scale(1); }
+        50% { opacity: 0.85; transform: scale(1.03); }
+      }
+
+      .moon-glow-ring {
+        animation: moonGlowPulse 4s ease-in-out infinite;
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+
+      /* HUD Scanline / Radar Pulse */
+      @keyframes radarSweep {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      .radar-line {
+        animation: radarSweep 6s linear infinite;
+        transform-origin: 1005px 125px;
+      }
+    </style>
+  </defs>
+
+  <!-- ================= FONDO ESPACIAL ================= -->
+  <rect width="1200" height="420" fill="url(#spaceDeep)" rx="18"/>
+
+  <!-- Nebulosas Cósmicas -->
+  <circle cx="220" cy="130" r="190" fill="url(#nebulaPurple)" filter="url(#bloomUltra)" />
+  <circle cx="980" cy="120" r="220" fill="url(#nebulaCyan)" filter="url(#bloomUltra)" />
+  <circle cx="680" cy="340" r="180" fill="url(#nebulaMagenta)" filter="url(#bloomUltra)" />
+
+  <!-- Marco Neón de Interfaz Futurista -->
+  <rect x="2" y="2" width="1196" height="416" fill="none" stroke="url(#textNeonGrad)" stroke-width="1.5" stroke-opacity="0.35" rx="17"/>
+  <path d="M 2,40 L 40,2 M 1160,2 L 1198,40 M 1198,380 L 1160,418 M 40,418 L 2,380" stroke="#00f3ff" stroke-width="1.5" stroke-opacity="0.5" fill="none" />
+
+  <!-- Campo de Estrellas Hiperrealista -->
+  <g fill="#ffffff">
+    <!-- Estrellas fijas y lejanas -->
+    <circle cx="45" cy="60" r="0.8" opacity="0.6"/>
+    <circle cx="120" cy="180" r="0.9" opacity="0.5"/>
+    <circle cx="200" cy="90" r="1" opacity="0.7"/>
+    <circle cx="310" cy="40" r="0.8" opacity="0.6"/>
+    <circle cx="390" cy="210" r="1.1" opacity="0.8"/>
+    <circle cx="480" cy="110" r="0.7" opacity="0.5"/>
+    <circle cx="560" cy="65" r="1.2" opacity="0.7"/>
+    <circle cx="640" cy="195" r="0.9" opacity="0.6"/>
+    <circle cx="730" cy="85" r="1.3" opacity="0.8"/>
+    <circle cx="810" cy="270" r="0.8" opacity="0.5"/>
+    <circle cx="890" cy="390" r="1.1" opacity="0.7"/>
+    <circle cx="1120" cy="240" r="1" opacity="0.6"/>
+    <circle cx="1150" cy="340" r="0.8" opacity="0.5"/>
+    <circle cx="80" cy="320" r="1.2" opacity="0.7"/>
+    <circle cx="170" cy="380" r="0.8" opacity="0.5"/>
+    <circle cx="290" cy="340" r="1" opacity="0.6"/>
+    <circle cx="430" cy="370" r="0.9" opacity="0.5"/>
+    <circle cx="530" cy="310" r="1.2" opacity="0.7"/>
+
+    <!-- Estrellas Animadas (Parpadeo rápido) -->
+    <circle cx="95" cy="115" r="1.6" class="star-f1" />
+    <circle cx="260" cy="160" r="2.0" class="star-f2" />
+    <circle cx="505" cy="50" r="1.8" class="star-f1" />
+    <circle cx="690" cy="140" r="2.2" class="star-f2" />
+    <circle cx="1110" cy="80" r="1.7" class="star-f1" />
+    <circle cx="770" cy="340" r="1.9" class="star-f2" />
+    <circle cx="340" cy="280" r="1.8" class="star-f1" />
+
+    <!-- Estrellas Animadas (Parpadeo profundo/lento) -->
+    <circle cx="150" cy="45" r="1.5" class="star-s1" />
+    <circle cx="420" cy="145" r="1.7" class="star-s2" />
+    <circle cx="600" cy="260" r="2.1" class="star-s1" />
+    <circle cx="850" cy="170" r="1.6" class="star-s2" />
+    <circle cx="1160" cy="190" r="1.8" class="star-s1" />
+
+    <!-- Estrellas Gigantes de 4 Puntas (Glow Neón) -->
+    <g fill="#00f3ff" class="star-f1">
+      <path d="M 520,130 Q 520,138 528,138 Q 520,138 520,146 Q 520,138 512,138 Q 520,138 520,130 Z" filter="url(#glowSubtle)" />
+    </g>
+    <g fill="#d946ef" class="star-f2">
+      <path d="M 230,220 Q 230,227 237,227 Q 230,227 230,234 Q 230,227 223,227 Q 230,227 230,220 Z" filter="url(#glowSubtle)" />
+    </g>
+    <g fill="#38bdf8" class="star-s1">
+      <path d="M 780,70 Q 780,77 787,77 Q 780,77 780,84 Q 780,77 773,77 Q 780,77 780,70 Z" filter="url(#glowSubtle)" />
+    </g>
+  </g>
+
+  <!-- ================= LÍNEAS DE HIPERVELOCIDAD ESPACIAL ================= -->
+  <g stroke-linecap="round" opacity="0.75">
+    <line x1="620" y1="380" x2="980" y2="140" stroke="#00f3ff" stroke-width="2.5" class="speed-stream-1" />
+    <line x1="680" y1="410" x2="1040" y2="170" stroke="#bd00ff" stroke-width="2" class="speed-stream-2" />
+    <line x1="560" y1="340" x2="920" y2="100" stroke="#38bdf8" stroke-width="1.8" class="speed-stream-3" />
+    <line x1="740" y1="390" x2="1100" y2="150" stroke="#00f3ff" stroke-width="1.2" class="speed-stream-1" opacity="0.5" />
+  </g>
+
+  <!-- ================= DESTINO: LA LUNA (HIPERREALISTA) ================= -->
+  <g id="luna-target" transform="translate(1005, 125)">
+    <!-- Corona Atmosférica y Resplandor Lunar -->
+    <circle cx="0" cy="0" r="95" fill="url(#moonAtmosphere)" class="moon-glow-ring" filter="url(#bloomUltra)" />
+    <circle cx="0" cy="0" r="82" fill="#38bdf8" opacity="0.15" filter="url(#glowSubtle)" />
+    
+    <!-- Anillo Radar de Navegación Espacial -->
+    <circle cx="0" cy="0" r="102" fill="none" stroke="#00f3ff" stroke-width="1" stroke-dasharray="6 8" opacity="0.4" />
+    <circle cx="0" cy="0" r="118" fill="none" stroke="#bd00ff" stroke-width="0.8" stroke-dasharray="3 14" opacity="0.35" />
+    
+    <!-- Línea de Escaneo Radar Activa -->
+    <line x1="0" y1="0" x2="102" y2="0" stroke="#00f3ff" stroke-width="1.5" opacity="0.6" class="radar-line" />
+
+    <!-- Marcadores de Puntos Cardinales Lunares -->
+    <line x1="0" y1="-106" x2="0" y2="-98" stroke="#00f3ff" stroke-width="2" />
+    <line x1="0" y1="98" x2="0" y2="106" stroke="#00f3ff" stroke-width="2" />
+    <line x1="-106" y1="0" x2="-98" stroke="#00f3ff" stroke-width="2" />
+    <line x1="98" y1="0" x2="106" stroke="#00f3ff" stroke-width="2" />
+    
+    <!-- CUERPO DE LA LUNA (Esfera 3D iluminada) -->
+    <circle cx="0" cy="0" r="76" fill="url(#moonBody)" />
+
+    <!-- Cráteres Lunares Detallados y Textura Realista -->
+    <!-- Gran Cráter Copernicus / Mare -->
+    <ellipse cx="-24" cy="-18" rx="20" ry="18" fill="url(#craterDeep)" opacity="0.75" />
+    <ellipse cx="-27" cy="-21" rx="17" ry="15" fill="url(#craterSoft)" opacity="0.6" />
+    <ellipse cx="-23" cy="-17" rx="13" ry="11" fill="#1e293b" opacity="0.5" />
+    <circle cx="-21" cy="-15" r="4" fill="#cbd5e1" opacity="0.5" /> <!-- Pico central del cráter -->
+
+    <!-- Cráter Tycho (Sureste lunar) -->
+    <ellipse cx="28" cy="22" rx="24" ry="20" fill="url(#craterDeep)" opacity="0.7" />
+    <ellipse cx="25" cy="19" rx="20" ry="17" fill="url(#craterSoft)" opacity="0.55" />
+    <ellipse cx="29" cy="23" rx="15" ry="12" fill="#0f172a" opacity="0.5" />
+    <circle cx="31" cy="25" r="5" fill="#e2e8f0" opacity="0.6" />
+
+    <!-- Cráteres Secundarios -->
+    <circle cx="-12" cy="38" r="13" fill="url(#craterDeep)" opacity="0.6" />
+    <circle cx="-14" cy="36" r="11" fill="url(#craterSoft)" opacity="0.45" />
+
+    <circle cx="32" cy="-32" r="11" fill="url(#craterDeep)" opacity="0.65" />
+    <circle cx="30" cy="-34" r="9" fill="url(#craterSoft)" opacity="0.5" />
+
+    <circle cx="6" cy="-8" r="8" fill="url(#craterDeep)" opacity="0.5" />
+    <circle cx="-45" cy="8" r="9" fill="url(#craterDeep)" opacity="0.6" />
+    <circle cx="48" cy="-5" r="7" fill="url(#craterDeep)" opacity="0.55" />
+    <circle cx="10" cy="50" r="8" fill="url(#craterDeep)" opacity="0.65" />
+
+    <!-- Sombra de Fase Esférica Tridimensional (Terminador Lunar) -->
+    <path d="M -54,-54 A 76 76 0 0 0 54 54 A 76 76 0 0 1 -54 -54 Z" fill="#020617" opacity="0.38" />
+
+  </g>
+
+  <!-- ================= LADO IZQUIERDO: INFORMACIÓN Y BRANDING ================= -->
+  <g transform="translate(65, 0)">
+    <!-- Badge de Estado de Misión -->
+    <g transform="translate(0, 78)">
+      <rect x="0" y="0" width="225" height="28" rx="14" fill="#0d0424" stroke="#bd00ff" stroke-width="1.4" opacity="0.95"/>
+      <circle cx="16" cy="14" r="5" fill="#00ffaa" filter="url(#glowSubtle)" />
+      <text x="30" y="19" class="font-tech" fill="#e9d5ff">SYSTEM STATUS: ACTIVE</text>
+    </g>
+
+    <!-- Nombre Principal del Usuario -->
+    <text x="0" y="160" class="font-title">Sayder Junior Carreño Ochoa</text>
+
+    <!-- Separador Estilo Circuito Neón -->
+    <g transform="translate(0, 182)">
+      <line x1="0" y1="0" x2="420" y2="0" stroke="url(#textNeonGrad)" stroke-width="2.5" />
+      <line x1="420" y1="0" x2="450" y2="25" stroke="#38bdf8" stroke-width="2.5" />
+      <circle cx="450" cy="25" r="4" fill="#00f3ff" filter="url(#glowSubtle)" />
+      <line x1="450" y1="25" x2="520" y2="25" stroke="#00f3ff" stroke-width="1.5" stroke-dasharray="4 4" />
+    </g>
+
+    <!-- Subtítulo de Misión Espacial -->
+    <g transform="translate(0, 240)">
+      <text x="0" y="0" class="font-subtitle">INITIATING TAKEOFF SEQUENCE (3, 2, 1)...</text>
+      <text x="0" y="30" class="font-tech" fill="#c084fc">DESTINATION: MOON  |  PROPULSION: IONIZED PLASMA  |  SPEED: ORBITAL</text>
+    </g>
+
+    <!-- Tarjetas de Telemetría HUD -->
+    <g transform="translate(0, 310)">
+      <!-- Panel 1 -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="130" height="42" rx="8" fill="#0f0728" stroke="#38bdf8" stroke-width="1.2" opacity="0.8"/>
+        <text x="12" y="17" font-family="'Rajdhani', monospace" font-size="10" font-weight="700" fill="#94a3b8">THRUST POWER</text>
+        <text x="12" y="34" font-family="'Orbitron', sans-serif" font-size="13" font-weight="700" fill="#00f3ff">100.0 %</text>
+      </g>
+
+      <!-- Panel 2 -->
+      <g transform="translate(145, 0)">
+        <rect x="0" y="0" width="130" height="42" rx="8" fill="#0f0728" stroke="#a855f7" stroke-width="1.2" opacity="0.8"/>
+        <text x="12" y="17" font-family="'Rajdhani', monospace" font-size="10" font-weight="700" fill="#94a3b8">APOAPSIS ALT</text>
+        <text x="12" y="34" font-family="'Orbitron', sans-serif" font-size="13" font-weight="700" fill="#d946ef">384,400 KM</text>
+      </g>
+
+      <!-- Panel 3 -->
+      <g transform="translate(290, 0)">
+        <rect x="0" y="0" width="130" height="42" rx="8" fill="#0f0728" stroke="#38bdf8" stroke-width="1.2" opacity="0.8"/>
+        <text x="12" y="17" font-family="'Rajdhani', monospace" font-size="10" font-weight="700" fill="#94a3b8">SYS LATENCY</text>
+        <text x="12" y="34" font-family="'Orbitron', sans-serif" font-size="13" font-weight="700" fill="#00ffaa">0.02 MS</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= NAVE ESPACIAL REALISTA EN VUELO (ANIMACIÓN 100% FUNCIONAL) ================= -->
+  <!-- Trayectoria orientada hacia la Luna (ángulo ~45° hacia arriba-derecha) -->
+  <g class="rocket-ship">
+    <!-- Contenedor posicionado en el centro de la trayectoria -->
+    <g transform="translate(820, 240) rotate(-42)">
+      
+      <!-- ================= PROPULSIÓN / LLAMA DE FUEGO REALISTA ================= -->
+      <!-- Pluma y Estela de Humo Ionizado -->
+      <path d="M -24,90 Q -45,180 -10,260 Q 0,280 10,260 Q 45,180 24,90 Z" fill="url(#exhaustSmoke)" filter="url(#glowSubtle)" />
+      
+      <!-- Fuego Principal del Reactor (Animado con pulsación ultrarrápida) -->
+      <g class="flame-anim">
+        <!-- Llama Exterior (Plasma Violeta / Magenta) -->
+        <polygon points="-22,90 0,220 22,90" fill="url(#thrusterCore)" filter="url(#bloomUltra)" />
+        
+        <!-- Llama Media (Azul Eléctrico / Cian) -->
+        <polygon points="-15,90 0,175 15,90" fill="#00f3ff" opacity="0.85" filter="url(#glowSubtle)" />
+        
+        <!-- Núcleo Hipercaliente de Combustión (Blanco Puro) -->
+        <polygon points="-8,90 0,120 8,90" fill="#ffffff" filter="url(#glowSubtle)" />
+        
+        <!-- Diamantes de Choque Mach (Shock Diamonds del motor) -->
+        <ellipse cx="0" cy="115" rx="5" ry="3" fill="#ffffff" class="shock-diamond" />
+        <ellipse cx="0" cy="140" rx="4" ry="2.5" fill="#67e8f9" class="shock-diamond" />
+        <ellipse cx="0" cy="165" rx="3" ry="2" fill="#c084fc" class="shock-diamond" />
+      </g>
+
+      <!-- Propulsores Laterales Secundarios (Llamas de los Boosters) -->
+      <g class="flame-anim">
+        <polygon points="-38,80 -34,130 -30,80" fill="url(#thrusterCore)" filter="url(#glowSubtle)" />
+        <polygon points="30,80 34,130 38,80" fill="url(#thrusterCore)" filter="url(#glowSubtle)" />
+      </g>
+
+      <!-- Chispas y Partículas de Plasma en Expulsión -->
+      <circle cx="-12" cy="140" r="2.5" fill="#00f3ff" class="particle-p1" filter="url(#glowSubtle)" />
+      <circle cx="18" cy="160" r="2" fill="#ffffff" class="particle-p2" filter="url(#glowSubtle)" />
+      <circle cx="-5" cy="190" r="2" fill="#d946ef" class="particle-p3" filter="url(#glowSubtle)" />
+
+      <!-- ================= CUERPO DE LA NAVE ESPACIAL REALISTA ================= -->
+      
+      <!-- Boosters / Cohetes Laterales -->
+      <!-- Booster Izquierdo -->
+      <g transform="translate(-34, 45)">
+        <path d="M -7, -25 Q 0,-38 7,-25 L 7, 35 L -7, 35 Z" fill="url(#rocketBodyGrad)" stroke="#334155" stroke-width="1" />
+        <polygon points="-6,35 6,35 4,42 -4,42" fill="url(#rocketDarkPlate)" />
+        <path d="M -7, -10 L 7, -10" stroke="#00f3ff" stroke-width="1.5" />
+        <!-- Aleta del booster -->
+        <path d="M -7, 10 L -18, 38 L -7, 35 Z" fill="#1e293b" stroke="#00f3ff" stroke-width="1" />
+      </g>
+
+      <!-- Booster Derecho -->
+      <g transform="translate(34, 45)">
+        <path d="M -7, -25 Q 0,-38 7,-25 L 7, 35 L -7, 35 Z" fill="url(#rocketBodyGrad)" stroke="#334155" stroke-width="1" />
+        <polygon points="-6,35 6,35 4,42 -4,42" fill="url(#rocketDarkPlate)" />
+        <path d="M -7, -10 L 7, -10" stroke="#00f3ff" stroke-width="1.5" />
+        <!-- Aleta del booster -->
+        <path d="M 7, 10 L 18, 38 L 7, 35 Z" fill="#1e293b" stroke="#00f3ff" stroke-width="1" />
+      </g>
+
+      <!-- Conectores estructurales de los Boosters al fuselaje central -->
+      <rect x="-28" y="40" width="12" height="6" rx="1" fill="#0f172a" />
+      <rect x="16" y="40" width="12" height="6" rx="1" fill="#0f172a" />
+
+      <!-- Alas / Alerones Principales de Estabilidad Aerodinámica -->
+      <path d="M -22, 35 L -52, 75 L -20, 65 Z" fill="#1e293b" stroke="#a855f7" stroke-width="1.5" />
+      <path d="M 22, 35 L 52, 75 L 20, 65 Z" fill="#0f172a" stroke="#a855f7" stroke-width="1.5" />
+      
+      <!-- Bordes de ataque iluminados en las alas -->
+      <line x1="-22" y1="35" x2="-52" y2="75" stroke="#00f3ff" stroke-width="2" />
+      <line x1="22" y1="35" x2="52" y2="75" stroke="#d946ef" stroke-width="2" />
+
+      <!-- Fuselaje Central (Cuerpo Principal de la Nave) -->
+      <path d="M 0, -85 Q 26, -10 22, 75 L -22, 75 Q -26, -10 0, -85 Z" fill="url(#rocketBodyGrad)" stroke="#64748b" stroke-width="1.5" />
+      
+      <!-- Sombra / Volumen Metálico del Fuselaje -->
+      <path d="M 0, -85 Q 26, -10 22, 75 L 0, 75 Z" fill="#0f172a" opacity="0.32" />
+
+      <!-- Cono de la Nariz / Escudo Térmico Cerámico (Heat Shield) -->
+      <path d="M 0, -85 Q 12, -55 14, -40 L -14, -40 Q -12, -55 0, -85 Z" fill="url(#rocketDarkPlate)" stroke="#475569" stroke-width="1" />
+
+      <!-- Franjas Neón de Identificación de la Misión -->
+      <path d="M -18, 0 L 18, 0" stroke="#00f3ff" stroke-width="3" />
+      <path d="M -20, 20 L 20, 20" stroke="#d946ef" stroke-width="3" />
+      <path d="M -21, 40 L 21, 40" stroke="#38bdf8" stroke-width="2" />
+
+      <!-- Ventana de Cabina / Cockpit Tridimensional Neón -->
+      <polygon points="0,-32 10,-12 0,-8 -10,-12" fill="#00f3ff" filter="url(#bloomUltra)" />
+      <polygon points="0,-30 8,-13 0,-9 -8,-13" fill="#ffffff" opacity="0.9" />
+      
+      <!-- Líneas de Paneles y Remaches Técnicos -->
+      <line x1="0" y1="-8" x2="0" y2="70" stroke="#64748b" stroke-width="1" stroke-dasharray="6 4" opacity="0.7" />
+      <circle cx="-10" cy="55" r="1.5" fill="#00f3ff" />
+      <circle cx="10" cy="55" r="1.5" fill="#00f3ff" />
+
+      <!-- Campana de Tobera del Motor Principal (Rocket Nozzle) -->
+      <polygon points="-18,75 18,75 13,90 -13,90" fill="url(#rocketDarkPlate)" stroke="#475569" stroke-width="1.5" />
+      <ellipse cx="0" cy="90" rx="13" ry="3" fill="#0f172a" stroke="#00f3ff" stroke-width="1" />
+
+    </g>
+  </g>
+</svg>
